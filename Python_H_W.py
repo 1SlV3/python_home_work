@@ -27,3 +27,20 @@ count = 1
 while count <= n:
     count *= 2
     print(count)
+    
+"""---------------------------------------------------""" # Задача 13
+
+N = int(input('Ко-во дней: '))
+local_max = 0
+global_max = 0
+
+for _ in range(N):
+    x = int(input('Температура: '))
+    if x > 0:
+        local_max += 1
+        if local_max > global_max:
+            global_max = local_max
+    else:
+        local_max = 0
+
+print(f'Ко-во дней с положительной температурой: {global_max}')
