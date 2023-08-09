@@ -4,23 +4,18 @@
 # Пользователь вводит 2 числа. n - кол-во элементов первого множества. m - кол-во
 # элементов второго множества. Затем пользователь вводит сами элементы множеств.
 
-n = int(input("Введите количество элементов первого множества: "))
-m = int(input("Введите количество элементов второго множества: "))
-set1 = set()
-set2 = set()
+num_1 = int(input("Введите колличество элементов первого множества: "))
+num_2 = int(input("Введите колличество элементов второго множества: "))
+diction_1 = set()
+diction_2 = set()
 
-print("Введите элементы первого множества:")
-for i in range(n):
-    element = int(input())
-    set1.add(element)
+for _ in range(num_1):
+    elem = int(input("Введите числа 1-го мнж: "))
+    diction_1.add(elem)
+for _ in range(num_2):
+    elem = int(input("Введите числа 2-го мнж: "))
+    diction_2.add(elem)
 
-print("Введите элементы второго множества:")
-for i in range(m):
-    element = int(input())
-    set2.add(element)
-    
-intersection = sorted(set1.intersection(set2))
+res = sorted(diction_1.intersection(diction_2))
 
-print("Числа, общие для обоих множеств и отсортированные по возрастанию:")
-for num in intersection:
-    print(num)    
+print(f'Общие числа по возврастанию 2-х множеств: {res}')  
